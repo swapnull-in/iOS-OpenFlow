@@ -46,10 +46,7 @@
     [_coverflow setViewDelegate:self];
     
     for (int i=0; i < 30; i++) {
-        
-        // [(AFOpenFlowView *)self.coverflow setImage:[self imageWithImage:[[appdel.arrIssue objectAtIndex:i] ThumbnailImg] convertToSize:CGSizeMake([[appdel.arrIssue objectAtIndex:i] ThumbnailImg].size.width*75/100, [[appdel.arrIssue objectAtIndex:i] ThumbnailImg].size.height*75/100)] forIndex:i];
-        
-       // [(AFOpenFlowView *) self.coverflow setImage:[UIImage imageNamed:@"loading.png"] forIndex:i];         
+            
         
         [(AFOpenFlowView *) self.coverflow setImage:[UIImage imageNamed:[[NSString alloc] initWithFormat:@"%d.jpg", i]] forIndex:i];
         
@@ -65,10 +62,6 @@
     [self openFlowView:(AFOpenFlowView *)self.coverflow  selectionDidChange:curSelIssue];
     
     [_viewCoverflow addSubview:_coverflow];
-    //        [coverflow release];
-    
-    //    [viewRefresh setHidden:YES];
-    //   [self callWebServicefornewIssue:availID];
     
 }
 
